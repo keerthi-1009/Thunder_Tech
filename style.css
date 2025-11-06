@@ -1,0 +1,129 @@
+:root{
+  --bg:#f8f9fa;
+  --brand:#0d6efd; 
+  --muted:#6c757d;
+  --card:#ffffff;
+  --accent:rgba(13,110,253,0.08);
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background-color:var(--bg);
+  color:#212529;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height:1.5;
+}
+
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+}
+.logo h4{font-size:1.05rem; font-weight:600; color:#0b3b66}
+.logo img{height:40px}
+.navbar-nav .nav-link{
+  color:#374151;
+  padding:0.5rem 0.75rem;
+}
+.navbar-nav .nav-link:hover{color:var(--brand)}
+
+.navbar-nav .nav-link.active{
+  color:var(--brand);
+  font-weight:600;
+}
+.hero{
+  width:100%;
+  min-height:56vh;
+  padding:3rem 1rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  background-image:linear-gradient(180deg, rgba(13,110,253,0.9), rgba(0,123,255,0.65)), url('asset/hero.jpg');
+  background-size:cover;
+  background-position:center;
+}
+.hero h1{font-size:2rem;max-width:900px;margin:0 auto}
+.hero .btn{background:rgba(255,255,255,0.95);color:var(--brand);border:0}
+
+.hero .btn:hover{background:rgba(255,255,255,0.85);color:var(--brand);box-shadow:0 4px 12px rgba(22, 38, 71, 0.1)}
+section.container{background:transparent}
+h2{font-size:1.5rem;color:#0b3b66}
+p{color:var(--muted)}
+
+.service-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+  gap:1.5rem;
+  margin-top:2rem;
+}
+.service-card{
+  background:var(--card);
+  border:0;
+  border-radius:12px;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:0 6px 18px rgba(22, 38, 71, 0.06);
+}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(22, 38, 71, 0.12)}
+.service-card .card-title{color:#0b3b66;font-weight:600}
+
+.service-card .card-text{color:var(--muted)}
+.service-card .btn{background:var(--brand);color:#fff;border:0}
+input.form-control, textarea.form-control{
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+  padding:.72rem .75rem;
+  transition:border-color .12s ease, box-shadow .12s ease;
+}
+input.form-control:focus, textarea.form-control:focus{
+  border-color:var(--brand);
+  box-shadow:0 0 0 0.15rem var(--accent);
+  outline:0;
+}
+
+input.form-control::placeholder, textarea.form-control::placeholder{
+  color:var(--muted);
+}
+table.table{background:transparent}
+table.table td input{
+  width:100%;
+  border:1px solid transparent;
+  border-radius:6px;
+  padding:.36rem .5rem;
+}
+table.table td input:focus{border-color:#d1e4ff;background:#fff}
+.btn-success{background:#198754;border:0}
+
+.btn-success:hover{background:#157347;box-shadow:0 4px 12px rgba(22, 38, 71, 0.1)}
+.btn-danger{background:#dc3545;border:0}
+footer{background:#0b2540}
+footer p{margin:0;color:#d7e6ff}
+footer a{color:#cfe6ff;text-decoration:none}
+footer a:hover{color:#fff}
+
+footer a:focus{color:#fff;outline-offset:2px}
+
+@media (max-width:767.98px){
+  .hero{min-height:45vh;padding:2.5rem 1rem}
+  .hero h1{font-size:1.4rem}
+  .logo h4{font-size:0.95rem}
+}
+
+@media (min-width:768px){
+  .hero h1{font-size:2.4rem}
+}
+
+.text-white{color:#fff}
+
+
+
+a:focus, button:focus, input:focus, textarea:focus{
+  outline-offset:2px;
+}
+
